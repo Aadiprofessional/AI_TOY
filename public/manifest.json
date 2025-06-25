@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "AI TOY",
+  "name": "AI TOY - Intelligent Toys for the Future",
+  "description": "Where Innovation Meets Imagination. Intelligent toys that grow with your child.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#3b82f6",
+  "background_color": "#ffffff",
+  "categories": ["shopping", "entertainment", "education"]
 }
