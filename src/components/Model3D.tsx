@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, PresentationControls, Environment, Float } from '@react-three/drei';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -69,9 +69,6 @@ export const Model3D: React.FC<Model3DProps> = ({
         
         if (targetEl) {
           const targetRect = targetEl.getBoundingClientRect();
-          
-          // Check if model should be in card position (keeping this logic for future use)
-          const shouldBeInCard = targetRect.top <= window.innerHeight / 2 && targetRect.bottom >= 0;
           // This can be used for additional animations in the future
         }
       };
@@ -94,9 +91,81 @@ export const Model3D: React.FC<Model3DProps> = ({
   };
 
   const getModelScale = () => {
-    if (animationType === 'card') return scale * 0.6;
-    if (animationType === 'detail') return scale * 1.2;
-    return scale;
+    // Detect model type and apply appropriate base scaling
+    const isElephant = modelPath.includes('elephant');
+    const isDino = modelPath.includes('dino');
+    
+    let baseScale = scale;
+    if (isElephant) {
+      baseScale = scale * 0.8; // Elephant needs smaller scale
+    } else if (isDino) {
+      baseScale = scale * 8; // Dino needs 10x larger scale
+    }
+
+    // Apply animation type modifiers
+    if (animationType === 'card') return baseScale * 0.6;
+    if (animationType === 'detail') return baseScale * 1.2;
+    return baseScale;
+  };
+
+  const getModelPosition = (): [number, number, number] => {
+    // Detect model type and apply appropriate positioning
+    const isElephant = modelPath.includes('elephant');
+    const isDino = modelPath.includes('dino');
+    
+    // Base position from props
+    let [x, y, z] = position;
+    
+    if (isElephant) {
+      // Elephant positioning adjustments
+      if (animationType === 'hero') {
+        return [x, y, z]; // Lower position for hero
+      } else if (animationType === 'card') {
+        return [x, y, z]; // Lower position for cards
+      } else if (animationType === 'detail') {
+        return [x, y-2, z]; // Slightly lower for detail view
+      }
+    } else if (isDino) {
+      // Dino positioning adjustments
+      if (animationType === 'hero') {
+        return [x, y, z]; // Higher position for hero
+      } else if (animationType === 'card') {
+        return [x, y +1.9, z]; // Lower position for cards
+      } else if (animationType === 'detail') {
+        return [x, y, z]; // Default position for detail view
+      }
+    }
+    
+    // Default position if no specific model type
+    return [x, y, z];
+  };
+
+  const getModelRotation = (): [number, number, number] => {
+    // Detect model type and apply appropriate rotation
+    const isElephant = modelPath.includes('elephant');
+    const isDino = modelPath.includes('dino');
+    
+    // Base rotation from props
+    let [rx, ry, rz] = rotation;
+    
+    if (isElephant) {
+      // Elephant rotation adjustments
+      if (animationType === 'hero') {
+        return [rx, ry + 0.2, rz]; // Slight rotation for better view
+      } else if (animationType === 'card') {
+        return [rx - 0.1, ry, rz]; // Slight tilt for cards
+      }
+    } else if (isDino) {
+      // Dino rotation adjustments
+      if (animationType === 'hero') {
+        return [rx, ry - 0.3, rz]; // Different rotation for better view
+      } else if (animationType === 'card') {
+        return [rx, ry + 0.1, rz]; // Slight rotation for cards
+      }
+    }
+    
+    // Default rotation
+    return [rx, ry, rz];
   };
 
   return (
@@ -130,8 +199,8 @@ export const Model3D: React.FC<Model3DProps> = ({
               <Model
                 modelPath={modelPath}
                 scale={getModelScale()}
-                position={position}
-                rotation={rotation}
+                position={getModelPosition()}
+                rotation={getModelRotation()}
                 autoRotate={autoRotate}
               />
             </PresentationControls>
@@ -140,8 +209,8 @@ export const Model3D: React.FC<Model3DProps> = ({
           <Model
             modelPath={modelPath}
             scale={getModelScale()}
-            position={position}
-            rotation={rotation}
+            position={getModelPosition()}
+            rotation={getModelRotation()}
             autoRotate={autoRotate}
           />
         )}

@@ -3,221 +3,125 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 1308,
+      "count": 1153,
       "max": [
-        36.458473205566406,
-        88.59794616699219,
-        46.736331939697266
+        0.3332577645778656,
+        0.2661789655685425,
+        0.4255736172199249
       ],
       "min": [
-        -36.45846939086914,
-        -24.40534019470215,
-        -33.41172409057617
+        -0.28824976086616516,
+        -0.24930787086486816,
+        -0.4367236793041229
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 15696,
+      "byteOffset": 13836,
       "componentType": 5126,
-      "count": 1308,
+      "count": 1153,
       "max": [
-        0.9999619126319885,
-        0.9979715347290039,
-        0.9999062418937683
+        0.9992510080337524,
+        0.999992311000824,
+        0.996658205986023
       ],
       "min": [
-        -0.9999619126319885,
-        -0.9999976754188538,
-        -0.999879777431488
+        -0.9988759756088257,
+        -0.9996495842933655,
+        -0.9990230798721313
       ],
       "type": "VEC3"
     },
     {
-      "bufferView": 3,
-      "componentType": 5126,
-      "count": 1308,
-      "max": [
-        1.0,
-        0.999879777431488,
-        0.9991888999938965,
-        1.0
-      ],
-      "min": [
-        -1.0,
-        -0.9288992285728455,
-        -0.9894863367080688,
-        1.0
-      ],
-      "type": "VEC4"
-    },
-    {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 1308,
+      "count": 1153,
       "max": [
-        0.9981727600097656,
-        0.9045422077178955
+        0.9919137954711914,
+        0.993800163269043
       ],
       "min": [
-        0.001827239990234375,
-        0.001827239990234375
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 10464,
-      "componentType": 5126,
-      "count": 1308,
-      "max": [
-        0.9981727600097656,
-        0.9045422077178955
-      ],
-      "min": [
-        0.001827239990234375,
-        0.001827239990234375
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 20928,
-      "componentType": 5126,
-      "count": 1308,
-      "max": [
-        0.9981727600097656,
-        0.9045422077178955
-      ],
-      "min": [
-        0.001827239990234375,
-        0.001827239990234375
+        0.0032285302877426147,
+        0.0032285451889038086
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 6672,
+      "count": 4578,
       "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "Andrey.Chegodaev (https://sketchfab.com/Andrey.Chegodaev)",
+      "author": "klrxyz (https://sketchfab.com/klrxyz)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/stuffed-dino-toy-d69e9bb7bfc6451993bf84f3e763a28a",
-      "title": "Stuffed dino toy"
+      "source": "https://sketchfab.com/3d-models/azure-frost-a-tale-of-the-electric-blue-stuffed-11a5835a4466410294502b9347501f7d",
+      "title": "Azure Frost A Tale of the Electric Blue Stuffed"
     },
-    "generator": "Sketchfab-15.18.0",
+    "generator": "Sketchfab-16.7.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 26688,
+      "byteLength": 18312,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 31392,
-      "byteOffset": 26688,
+      "byteLength": 9224,
+      "byteOffset": 18312,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 31392,
-      "byteOffset": 58080,
+      "byteLength": 27672,
+      "byteOffset": 27536,
       "byteStride": 12,
-      "name": "floatBufferViews",
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 20928,
-      "byteOffset": 89472,
-      "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
     }
   ],
   "buffers": [
     {
-      "byteLength": 110400,
+      "byteLength": 55208,
       "uri": "scene.bin"
     }
   ],
-  "extensionsRequired": [
-    "KHR_materials_pbrSpecularGlossiness"
-  ],
-  "extensionsUsed": [
-    "KHR_materials_pbrSpecularGlossiness"
-  ],
   "images": [
     {
-      "uri": "textures/Material.001_diffuse.png"
-    },
-    {
-      "uri": "textures/Material.001_specularGlossiness.png"
-    },
-    {
-      "uri": "textures/Material.001_normal.png"
-    },
-    {
-      "uri": "textures/Material.001_occlusion.png"
+      "uri": "textures/SimplygonCastMaterial_baseColor.png"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "extensions": {
-        "KHR_materials_pbrSpecularGlossiness": {
-          "diffuseFactor": [
-            1.0,
-            1.0,
-            1.0,
-            1.0
-          ],
-          "diffuseTexture": {
-            "index": 0
-          },
-          "glossinessFactor": 1.0,
-          "specularFactor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "specularGlossinessTexture": {
-            "index": 1
-          }
-        }
-      },
-      "name": "Material.001",
-      "normalTexture": {
-        "index": 2
-      },
-      "occlusionTexture": {
-        "index": 3
+      "name": "SimplygonCastMaterial",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
       }
     }
   ],
   "meshes": [
     {
-      "name": "Cube.001_Material.001_0",
+      "name": "ProcessedMeshNode_LOD1_SimplygonCastMaterial_0",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 1,
             "POSITION": 0,
-            "TANGENT": 2,
-            "TEXCOORD_0": 3,
-            "TEXCOORD_1": 4,
-            "TEXCOORD_2": 5
+            "TEXCOORD_0": 2
           },
-          "indices": 6,
+          "indices": 3,
           "material": 0,
           "mode": 4
         }
@@ -271,7 +175,7 @@
         0.0,
         1.0
       ],
-      "name": "bbdc376086084aceb880bfa338b2722a.fbx"
+      "name": "final.fbx"
     },
     {
       "children": [
@@ -284,28 +188,28 @@
         4
       ],
       "matrix": [
-        1.2313860654830933,
+        4.3711386728180365e-06,
+        1.1102229399218618e-14,
+        99.99999237060538,
+        0.0,
+        99.99999237060528,
+        -4.3711386728180365e-06,
+        -4.371138678369152e-06,
+        0.0,
+        4.371139011860592e-06,
+        99.99999999999991,
+        -1.9984014443252818e-13,
         0.0,
         0.0,
         0.0,
-        0.0,
-        0.7917922735214233,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.065483808517456,
-        0.0,
-        0.0,
-        16.602619171142578,
         0.0,
         1.0
       ],
-      "name": "Cube.001"
+      "name": "ProcessedMeshNode_LOD1"
     },
     {
       "mesh": 0,
-      "name": "Cube.001_Material.001_0"
+      "name": "ProcessedMeshNode_LOD1_SimplygonCastMaterial_0"
     }
   ],
   "samplers": [
@@ -329,18 +233,6 @@
     {
       "sampler": 0,
       "source": 0
-    },
-    {
-      "sampler": 0,
-      "source": 1
-    },
-    {
-      "sampler": 0,
-      "source": 2
-    },
-    {
-      "sampler": 0,
-      "source": 3
     }
   ]
 }
